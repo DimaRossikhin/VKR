@@ -1,0 +1,25 @@
+<div class = "login">
+    <h1>Предсказание значений модуля упругости при растяжении</h1>
+     <h3>Введите значения известных параметров:</h3>
+
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="1" placeholder="Плотность, кг/м3" required="required" />
+        <input type="text" name="2" placeholder="Модуль упругости, ГПа" required="required" />
+        <input type="text" name="3" placeholder="Количество отвердителя, м.%" required="required" />
+        <input type="text" name="4" placeholder="Содержание эпоксидных групп, %_2" required="required" />
+        <input type="text" name="5" placeholder="Температура вспышки, С_2" required="required" />
+        <input type="text" name="6" placeholder="Поверхностная плотность, г/м2" required="required" />
+        <input type="text" name="7" placeholder="Прочность при растяжении, МПа" required="required" />
+        <input type="text" name="8" placeholder="Потребление смолы, г/м2" required="required" />
+        <input type="text" name="9" placeholder="Угол нашивки, град" required="required" />
+        <input type="text" name="10" placeholder="Шаг нашивки" required="required" />
+        <input type="text" name="12" placeholder="Плотность нашивки" required="required" />
+
+        <button type="submit" class="btn">Predict</button>
+    </form>
+
+<br>
+<br>
+{{prediction_text}}
+
+</div>
